@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+/*font - 'Noto Sans KR'*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*font - Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*Common*/
+:root {--blue : #1e4490;}
+body, h1, h2, h3, h4, h5, h6, ul, ol, li, p, button {margin: 0;padding: 0;}
+ol, ul, li {list-style: none;}
+body {
+  line-height: 1;font-size: 16px;
+  font-family: Roboto, 'Noto Sans KR', '맑은 고딕', 'Apple Gothic', sans-serif;
+}
+a {text-decoration: none;color: inherit;}
+button {background: none;border: none;cursor: pointer;font: inherit; color: inherit;line-height: 1;}
+.container {width: 90%;margin: auto;}
+.clrfix:after {content:""; display: block;clear: both;}
+.blind {display: block;width: 0;height: 0;overflow: hidden;}
+.material-icons {vertical-align: middle;}
+
+.skip_nav a {
+  display: block;line-height: 50px;background-color: var(--blue);
+  text-align: center;position: absolute;left: 0;right: 0;top: -50px;
+}
+.skip_nav a:focus {top: 0;}
+
+/*header*/
+header h1 {float: left;}
+header .lang_wrap {float: right;text-align: center;background: #FFF;width: 80px;}
+header .lang_wrap span {line-height: 75px;cursor: pointer;}
+header .lang_wrap ul {}
+header .lang_wrap li {line-height: 2;}
+
+/*visual*/
+main .visual_wrap {overflow: hidden;position: relative;}
+main .visual_wrap .swiper-slide {height: calc(100vh - 100px);background-size: cover;background-repeat: no-repeat;background-position: center;}
+main .visual_wrap .visual1 {background-image: url(../../img/main_visual_slide_1.jpg);}
+main .visual_wrap .visual2 {background-image: url(../../img/main_visual_slide_2.jpg);}
+main .visual_wrap .visual3 {background-image: url(../../img/main_visual_slide_3.jpg);}
+main .swiper-slide .vis_txt {width: 90%;margin: auto;padding: 200px 0;color: #fff;}
+main .vis_txt b {display: block;font-size: 30px;padding-bottom: 25px;}
+main .vis_txt p {font-size: 20px;}
+.visual_wrap .visual-pagination  {position: absolute;left: 0;right: 0;bottom: 50px;text-align: center;z-index: 10;}
+.visual_wrap .visual-pagination span {width: 15px;height: 15px;background: #FFF;opacity: 0.8}
+.visual_wrap .visual-pagination .swiper-pagination-bullet-active {width: 40px;background: red;border-radius: 15px;}
+.visual_wrap button {background: red;width: 20px;height: 20px;}
+
+/*지속가능경영-gsv*/
+main .gsv_wrap {}
+main .gsv_wrap li {float: left;text-align: center;}
+/* 
+main .gsv_wrap ul>li {text-align: center;} */
+
+main .gsv_wrap ul li img {width: 100px;padding-bottom: 100px;}
+main .gsv_wrap ul li span {font-size: 25px;display: block;}
+
+/* 사업분야 - prod */
+main .prod_wrap .contents{overflow: hidden;border: 1px solid green;}
+main .prod_wrap .prod_list .prod1 {background-image: url(../../img/sub_visual_trsfm.jpg);}
+main .prod_wrap .prod_list .prod2 {background-image: url(../../img/sub_visual_monitoring.jpg);}
+main .prod_wrap .prod_list .prod3 {background-image: url(../../img/sub_visual_energy.jpg);}
+main .prod_wrap .prod_list .prod4 {background-image: url(../../img/sub_visual_motor.jpg);}
+main .prod_wrap .prod_list .prod5 {background-image: url(../../img/sub_visual_machine.jpg);}
+main .prod_wrap .prod_list .prod6 {background-image: url(../../img/sub_visual_gear.jpg);}
+main .prod_wrap .prod_list .prod7 {background-image: url(../../img/sub_visual_welding.jpg);}
+main .prod_wrap .prod_list .prod8 {background-image: url(../../img/sub_visual_field.jpg);}
+
+
+
+/* 기타 */
+main .others_wrap {background: url(../../img/office-865091_1920.jpg);}
+main .others_wrap ul li {float: left;color: #FFF;}
+main .others_wrap ul li a {border: 1px solid #FFF;}
+
+/* Footer */
+footer {background: #f3f3f3;color: #666;}
+footer .footer_menu_wrap li {display: inline-block;text-align: center;}
+
+footer .sns_wrap {float: right;}
+footer .sns_wrap li {float: left;}
+footer .sns_wrap li a {display: block;width: 36px;height: 36px;background-image: url(../../img/sns_icon_img.png);}
+
+footer .sns_wrap li:nth-child(1) a {background-position: 0px 0px;}
+footer .sns_wrap li:nth-child(2) a {background-position: 0px -46px;}
+footer .sns_wrap li:nth-child(3) a {background-position: 0px -92px;}
+
+/* @common */
+
+
+/* PC */
+@media screen and (min-width: 1280px) {
+  .container {max-width: 1530px; min-width: 1200px;}
+
+  /* Header */
+  header {height: 75px;}
+  /* (75-37) / 2 = 19 */
+  header h1 {padding-top: 17px;}
+
+  header .mo_btn {display: none;}
+  header .lang_wrap ul {display: none;border: 1px solid #CCC;border-top: none;padding: 10px 15px;background: #FFF;}
+  header .lang_wrap span {}
+  header .lang_wrap .lang {}
+  header .lang_wrap .lang li {}
+
+  header .gnb_wrap {text-align: center;}
+  header .gnb_wrap .gnb {}
+  header .gnb_wrap .gnb li {display: inline-block;line-height: 75px;margin: 0 60px 0 0;}
+  header .gnb_wrap .gnb li:last-child {margin: 0;}
+  header .gnb_wrap .gnb li a {font-size: 18px;}
+  
+
+  /* Main */
+  main .swiper-slide .vis_txt {max-width: 1530px;min-width: 1200px;}
+
+  /* 지속가능경영-gsv */
+  main h2 {text-align: center;font-size: 40px;padding-bottom: ;}
+  main .gsv_wrap  h3 {display: none;}
+
+  main .gsv_wrap {padding: 100px 0;}
+  main .gsv_wrap ul {padding: 140px 0;}
+  main .gsv_wrap li {width: 25%;}
+  main .gsv_wrap ul li img {width: 100px;padding-bottom: 100px;}
+  main .gsv_wrap ul li span {font-size: 25px;display: block;}
+
+  /* 사업분야 - prod */
+  main .prod_wrap {background-color: powderblue;}
+  main .prod_wrap .prod_txt {float: left; width: 30%;height: 500px;}
+  main .prod_wrap .prod_txt h2 {padding-bottom: 50px;text-align: left;}
+  main .prod_wrap .prod_txt p {padding: 50px 0;}
+  main .prod_wrap .prod_txt a {border: 1px solid #000;border-radius: 15px;padding: 10px 15px;}
+  
+  main .prod_wrap .contents {float: right; width: 70%;height: 500px;}
+
+  main .prod_wrap .prod_list {border: 1px solid green;}
+  main .prod_wrap .prod_list li {height: 400px;}
+
+  main .prod_wrap .prod_list li .prod1,.prod2,.prod3,.prod4,.prod5,.prod6,.prod7,.prod8 {display: none;}
+  /* jq 적용하면 지우기 */
+
+  main .prod_wrap .prod_list li a {height: 100px;}
+  main .prod_wrap .prod_list li strong {display: block; padding-bottom: 30px; font-size: 30px;}
+  main .prod_wrap .prod_list li p {}
+  main .prod_wrap .prod_list li span {}
+
+  main .prod_wrap .prod_tabs {border: 1px solid red;}
+  main .prod_wrap .prod_tabs button {display: block;float: left;width: calc(100% / 8);height: 100px; background-color: pink;}
+  main .prod_wrap .prod_tabs .tab_on {}
+
+
+
+  /* 뉴스 - pc */
+  main .news_wrap {padding: 100px 0;clear: both;}
+  main .news_wrap ul {padding-top: 70px;}
+  main .news_wrap ul li {width: 31.5%;float: left;margin-right: 30px;}
+  main .news_wrap ul li:last-child {margin-right: 0;}
+  main .news_wrap ul li a {}
+  main .news_wrap ul li img {}
+  main .news_wrap ul li strong {margin: 30px 0;}
+  main .news_wrap ul li strong {font-size: 22px;}
+  main .news_wrap ul li p {}
+  main .news_wrap ul li span {font-size: 14px;}
+
+  /* main .main_banner_wrap .banner {width: 31.5%;float: left;margin-right: 30px;}
+  main .main_banner_wrap .banner:last-child {margin-right: 0;} */
+
+
+  /* 기타 - pc */
+  main .others_wrap {width: 100%;height: 100vh;clear: both;}
+  main .others_wrap ul {padding-top: 200px;}
+  main .others_wrap ul li {}
+  main .others_wrap ul li:nth-child(2) {margin-right: 500px;}
+  main .others_wrap ul li a {display: block;margin: 100px 150px; border-radius: 200px;width: 200px;height: 200px;text-align: center;line-height: 200px; font-size: 30px;}
+  main .others_wrap ul li a:first-child {}
+
+
+  /* Footer */
+  footer .footer_container {padding: 50px 50px;}
+  footer .footer_menu_wrap {}
+  footer .footer_menu_wrap li {display: inline;float: left;margin: 0 40px 0 0;}
+  footer .footer_menu_wrap li a {}
+
+  footer .familysite_wrap a {float: right;border: 1px solid #000;padding: 15px;background: red;}
+
+  footer .corp_info_wrap address,p,.sns_wrap {margin: 30px 0;}
+  footer .corp_info_wrap address {margin: 60px 0 0 0;}
+  footer .corp_info_wrap p {display: inline-block;}
+
+  footer .corp_info_wrap .sns_wrap {}
+  footer .corp_info_wrap .sns_wrap li {}
+
+  footer .sns_wrap {}
+  footer .sns_wrap li {}
+  footer .sns_wrap li img {}
+}/*@pc*/
+ 
+ 
+ 
+
+/* mo */
+@media screen and (max-width: 1279px) {
+/* Header */
+header {height: 50px;}
+header h1 {padding: 15px 0;}
+header h1 img {width: 140px;}
+header h1 span {}
+
+header .mo_btn {width: 500px;height: 700px;background: pink;position: relative;}
+header .mo_btn .gnb_open {float: right;width: 30px;height: 30px;margin: 15px;}
+header .mo_btn  .gnb_close {position: absolute; width: 30px;height: 30px;top: 15px;right: 15px;}
+
+header .lang_wrap {}
+header ul .lang {}
+header .lang li {background: blue;}
+
+header .gnb_wrap {}
+header .gnb_wrap .gnb {display: none;}
+header ul .gnb li {}
+
+/* Main */
+main .visual_wrap {}
+main .visual_wrap img {}
+main .visual_wrap b {}
+main .visual_wrap p {}
+
+main .gsv_wrap {}
+main .gsv_wrap li {width: 50%;}
+
+/* 공통 */
+main h2 {margin: 100px 0 30px;text-align: center;font-size: 30px;}
+main h3 {text-align: center;margin-bottom: 100px;font-size: 16px;}
+
+main .gsv_wrap ul {}
+main .gsv_wrap ul li {}
+main .gsv_wrap ul li img {padding-bottom: 20px;}
+main .gsv_wrap ul li span {margin-bottom: 50px;font-size: 20px;}
+
+main .prod_wrap ul {}
+main .prod_wrap ul li {}
+main .prod_wrap ul li img {}
+main .prod_wrap ul li span {}
+
+/* 뉴스 - mo */
+main .news_wrap {}
+main .news_wrap ul {}
+main .news_wrap ul li {}
+main .news_wrap ul li a {}
+main .news_wrap ul li img {}
+main .news_wrap ul li strong {}
+main .news_wrap ul li p {}
+main .news_wrap ul li span {}
+
+
+/* 기타 - mo */
+main .others_wrap {}
+main .others_wrap ul {}
+main .others_wrap ul li {}
+main .others_wrap ul li span {}
+
+
+/* Footer - mo*/
+footer .footer_container {padding: 30px;}
+footer .footer_menu_wrap {}
+footer .footer_menu_wrap>li {margin: 20px 30px 20px 0;}
+footer .footer_menu_wrap li a {}
+
+footer .familysite_wrap a {}
+
+footer .corp_info_wrap address {}
+footer .corp_info_wrap p {margin-top: 20px;}
+
+footer .corp_info_wrap .sns_wrap {}
+footer .corp_info_wrap .sns_wrap li {}
+
+footer .sns_wrap {}
+footer .sns_wrap li {}
+footer .sns_wrap li img {}
+
+}/*@mo*/
